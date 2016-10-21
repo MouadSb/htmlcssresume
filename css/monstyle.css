@@ -1,0 +1,47 @@
+body{
+    font-family: Impact, "Arial Black", Arial, Verdana, sans-serif;
+    background-image: url("../images/bg_test.jpg");
+    background-repeat: no-repeat;
+}
+
+h1{
+	color: #d29729;
+	font-size: 3em;
+	border : 1px white solid;
+	border-radius: 20px / 60px;
+}
+p{
+	color: #9e1e99;
+	font-size: 0.9em;}
+.test{	
+    width: 250px;
+    height: 110px;
+    text-align: justify;
+    border: 1px solid black;
+    overflow: auto;
+}
+
+p:hover{
+	color: white;
+}
+
+.imageflottante{
+	float: left;
+}
+
+.dessou{
+	clear : both;
+}
+
+em{
+	color: black;
+}
+em:hover{
+	color:white;
+	text-decoration: underline;
+}
+
+section{
+	background-color: #db634b;
+	padding: 8px;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Formulaire et Javascript</title>
+	<style>
+		label{
+			display : inline-block;
+			min-width : 200px;
+			margin-bottom : 10px;
+		}
+	</style>
+
+
+</head>
+<body>
+
+	<h1> Formulaire en HTML </h1>
+
+	<form action="" method="POST">
+		<label for="inp_nom">Nom :</label>
+		<input type="text" name="nom" id="inp_nom" required="required" maxlength="20" /> <span id="miss_nom"></span> <br>
+
+		<label for="inp_mail" >Email :</label>
+		<input type="email" name="mail" id="inp_mail" required="required"/> 
+		<span id="miss_mail"></span> <br>
+		
+
+		<label for="inp_telephone">Telephone :</label>
+		<input type="tel" name="telephone" id="inp_telephone" required="required"/> <br>
+
+		<input id="btn_submit" type="submit" value="Valider" />
+	</form>
+
+	<script>
+
+		// Buttons
+		var btn_sbm = document.getElementById('btn_submit');
+
+		// Nom
+		var nom = document.getElementById("inp_nom");
+		var miss_nom = document.getElementById("miss_nom");
+
+		// Email
+		var mail = document.getElementById("inp_mail");
+		var miss_mail = document.getElementById("miss_mail");
+
+		/** Regex **/
+			//nom
+		var rg_nom = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+)?$/;
+
+
+
+
+		btn_sbm.addEventListener('click', f_valid);
+
+		function f_valid(e){
+			if(nom.validity.valueMissing){
+				e.preventDefault();
+				miss_nom.textContent = "Champ obligatoire";
+				miss_nom.style.color= "red";
+			}else if(rg_nom.test(nom.value) == false ){
+				e.preventDefault();
+				miss_nom.textContent = "Format incorrecte";
+				miss_nom.style.color= "orange";
+			}else{
+				miss_nom.textContent = "";
+			}
+		}
+
+	</script>
+</body>
+</html>

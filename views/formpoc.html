@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulaire interatif</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/styleform.css" />
+</head>
+<body>
+
+	<h1> Formulaire openclassrom 1</h1>
+
+	<form id="myForm">
+		
+		<label for="sexe_c">Sexe :</label>
+		<input type="radio" name="sexe_c" id="sexe_c1" value="Homme">
+			<label for="sexe_c1">Homme</label></input>
+		<input type="radio" name="sexe_c" id="sexe_c2" value="Femme">
+			<label for="sexe_c2">Femme</label></input>
+			<span id="err_sexe"></span>
+			<br><br>
+
+		<label for="nom"> Nom :</label>
+		<input type="text" name="nom" id="nom" minlength="2">
+			<span id="err_nom"></span>
+		<br><br>
+
+		<label for="prenom"> Prenom :</label>
+		<input type="text" name="prenom" id="prenom" minlength="2">
+			<span id="err_prenom"></span>
+		<br><br>
+
+		<label for="age"> âge :</label>
+		<input type="number" name="age" id="age" min="5" max="140">
+			<span id="err_age"></span>
+		<br><br>
+
+		<label for="pseudo"> Pseudo :</label>
+		<input type="text" name="pseudo" id="pseudo" minlength="4">
+			<span id="err_pseudo"></span>
+		<br><br>
+
+		<label for="password"> Mot de passe :</label>
+		<input type="password" name="password" id="password" minlength="6">
+			<span id="err_password"></span>
+		<br><br>
+
+		<label for="passwordc"> Mot de passe (confirmation) :</label>
+		<input type="password" name="passwordc" id="passwordc" minlength="4">
+			<span id="err_passwordc"></span>
+		<br><br>
+
+		<label for="pays"> Pays :</label>
+		<select id="pays">
+			<option selected="selected">Maroc</option>
+			<option>France</option>
+			<option>Êtats Unis</option>
+		</select>
+			<span id="err_pays"></span>
+		<br><br>
+
+		<label for="chnewsletter">Recevoir des emails</label>
+		<input type="checkbox" name="chnewsletter" id="chnewsletter"><br><br>
+
+		<input type="submit" name="submit" id="valider" />
+	</form>
+
+
+
+	<script src="../js/scriptform.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Essais de sauts de ligne</title>
+        <style>
+            #div1{
+                border : 1px solid orange;
+            }
+            #div2{
+                border : 1px solid red;
+            }
+        </style>
+
+
+    </head>
+
+    <body>
+
+
+        <p>Engagez une conv , et rengagez la convo </p>
+        <p id="reg"></p>
+
+        <script>
+        // Telephone
+            var para = document.getElementById("reg");
+            var number1 = "415-555-1212";
+            var number2 = "(123) 456-7890";
+            var number3 = "123.456.7890";
+            var number4 = "1234567890";
+            var number5 = "123 456 7890";
+            
+            var rg = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
+
+            var res1 = number1.match(rg);
+            var res2 = number2.match(rg);
+            var res3 = number3.match(rg);
+            var res4 = number4.match(rg);
+            var res5 = number5.match(rg);
+
+            para.innerHTML = " Res 1 renvoie true ou false: "+ rg.test(number1) + "\n" + 
+                " Res 2 : "+ res2 + "\n" + 
+                " Res 3 : "+ res3 + "\n" + 
+                " Res 4 : "+ res4 + "\n" + 
+                " Res 5 : "+ res5 + "\n";
+
+        // Mail 
+        var mail = "mouad@g.com";
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        alert(validateEmail(mail));
+
+        </script>
+
+
+    </body>
+</html>

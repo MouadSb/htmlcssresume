@@ -1,4 +1,6 @@
-var texte = "J'apprends le JAVASCRIPT";
+(function local(){
+	var x =5;
+	alert(x);
+})();
 
-
-alert(texte.slice(0,10));
+local();

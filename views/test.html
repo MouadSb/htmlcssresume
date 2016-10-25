@@ -3,99 +3,57 @@
     <head>
         <meta charset="utf-8" />
         <title>Essais de sauts de ligne</title>
+        <style>
+        	#div1{
+        		border : 1px solid orange;
+        	}
+        	#div2{
+        		border : 1px solid red;
+        	}
+        </style>
+
+
     </head>
 
     <body>
-	    <h1 >Bienvenue sur OpenClassrooms !</h1>
-	    <p> <a href="#mon_ancre"> clique ici </a> </p>
-	    <p>Bonjour et bienvenue sur mon site : OpenClassrooms.<br />
-	       OpenClassrooms, qu'est-ce que c'est ?</p>
 
-	    <h2>Des cours pour débutants</h2>
-	    
-    	<p> Ceci est mon premier test alors <em>soyez indulgents</em> s'il vous plaît, j'apprends petit à petit comment cela marche.</p>	    
-	    <p>Vous pourrez ainsi apprendre, sans rien y connaître auparavant, à créer un site web, à programmer, à construire des mondes en 3D !</p>
 
-	    <h2>Une communauté active</h2>
-	    
-	    <p>Bonjour et bienvenue sur mon site !<br />
-	    Ceci est mon premier test alors <strong>soyez indulgents</strong> s'il vous plaît, j'apprends petit à petit comment cela marche.</p>
+    	<p>Engagez une conv , et rengagez la convo </p>
+    	<p id="reg"></p>
 
-	    <h2>Une communauté active</h2>
-	    
-	    <p>Bonjour et bienvenue sur mon site !<br />
-	    Ceci est mon premier test alors <mark>soyez indulgents</mark> s'il vous plaît, j'apprends petit à petit comment cela marche.</p>
+    	<script>
 
-	    <h3> Ceci est un test de liste non ordonnée</h3>
-	    <ul>
-	    	<li>Fraises</li>
-	    	<li>
-		    	<ol>
-			    	<li>Fraises</li>
-			    	<li>Framboises</li>
-			    	<li>Cerises</li>
-		    	</ol>
-	    	</li>
-	    	<li>Cerises</li>
-	    </ul>
-	    <h2> Les Liens</h2>
-	    <h3> First </h3>
-	    <p>Ceci est un lien <a href="test2.html">Google</a> </p>
-	     <h2>Des cours pour débutants</h2>
-	    
-    	<p> Ceci est mon premier test alors <em>soyez indulgents</em> s'il vous plaît, j'apprends petit à petit comment cela marche.</p>	    
-	    <p>Vous pourrez ainsi apprendre, sans rien y connaître auparavant, à créer un site web, à programmer, à construire des mondes en 3D !</p>
+    		var para = document.getElementById("reg");
+    		var number1 = "415-555-1212";
+    		var number2 = "(123) 456-7890";
+    		var number3 = "123.456.7890";
+    		var number4 = "1234567890";
+    		var number5 = "123 456 7890";
+    		
+    		var rg = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
 
-	    <h2>Une communauté active</h2>
-	    
-	    <p>Bonjour et bienvenue sur mon site !<br />
-	    Ceci est mon premier test alors <strong>soyez indulgents</strong> s'il vous plaît, j'apprends petit à petit comment cela marche.</p>
+    		var res1 = number1.match(rg);
+    		var res2 = number2.match(rg);
+ 			var res3 = number3.match(rg);
+ 			var res4 = number4.match(rg);
+ 			var res5 = number5.match(rg);
 
-	    <h2>Une communauté active</h2>
-	     <h2>Des cours pour débutants</h2>
-	    
-    	<p> Ceci est mon premier test alors <em>soyez indulgents</em> s'il vous plaît, j'apprends petit à petit comment cela marche.</p>	    
-	    <p>Vous pourrez ainsi apprendre, sans rien y connaître auparavant, à créer un site web, à programmer, à construire des mondes en 3D !</p>
+ 			para.innerHTML = " Res 1 renvoie true ou false: "+ rg.test(number1) + "\n" + 
+ 				" Res 2 : "+ res2 + "\n" + 
+ 				" Res 3 : "+ res3 + "\n" + 
+ 				" Res 4 : "+ res4 + "\n" + 
+ 				" Res 5 : "+ res5 + "\n";
 
-	    <h2>Une communauté active</h2>
-	    
-	    <p>Bonjour et bienvenue sur mon site !<br />
-	    Ceci est mon premier test alors <strong>soyez indulgents</strong> s'il vous plaît, j'apprends petit à petit comment cela marche.</p>
+    		
+ 		var mail = "mouad@g,com";
+        function validateEmail(email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
 
-	    <h2>Une communauté active</h2>
-	     <h2>Des cours pour débutants</h2>
-	    
-    	<p> Ceci est mon premier test alors <em>soyez indulgents</em> s'il vous plaît, j'apprends petit à petit comment cela marche.</p>	    
-	    <p>Vous pourrez ainsi apprendre, sans rien y connaître auparavant, à créer un site web, à programmer, à construire des mondes en 3D !</p>
+        alert(validateEmail(mail));
+    	</script>
 
-	    <h2>Une communauté active</h2>
-	    
-	    <p>Bonjour et bienvenue sur mon site !<br />
-	    Ceci est mon premier test alors <strong>soyez indulgents</strong> s'il vous plaît, j'apprends petit à petit comment cela marche.</p>
-
-	    <h2>Une communauté active</h2>
-	     <h2>Des cours pour débutants</h2>
-	    
-    	<p> Ceci est mon premier test alors <em>soyez indulgents</em> s'il vous plaît, j'apprends petit à petit comment cela marche.</p>	    
-	    <p>Vous pourrez ainsi apprendre, sans rien y connaître auparavant, à créer un site web, à programmer, à construire des mondes en 3D !</p>
-
-	    <h2>Une communauté active</h2>
-	    
-	    <p>Bonjour et bienvenue sur mon site !<br />
-	    Ceci est mon premier test alors <strong>soyez indulgents</strong> s'il vous plaît, j'apprends petit à petit comment cela marche.</p>
-
-	    <h2 id="mon_ancre">Une communauté active</h2>
-	     <h2>Des cours pour débutants</h2>
-	    
-    	<p> Ceci est mon premier test alors <em>soyez indulgents</em> s'il vous plaît, j'apprends petit à petit comment cela marche.</p>	    
-	    <p>Vous pourrez ainsi apprendre, sans rien y connaître auparavant, à créer un site web, à programmer, à construire des mondes en 3D !</p>
-
-	    <h2>Une communauté active</h2>
-	    
-	    <p>Bonjour et bienvenue sur mon site !<br />
-	    Ceci est mon premier test alors <strong>soyez indulgents</strong> s'il vous plaît, j'apprends petit à petit comment cela marche.</p>
-
-	    <h2>Une communauté active</h2>
 
     </body>
 </html>

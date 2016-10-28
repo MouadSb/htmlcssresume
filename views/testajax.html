@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+
+
+
+
+
+
+	    $("button").click(function(){
+	      /*  $.get("http://localhost:8081/maps/All", function(data){
+	            console.log(data);
+	        });
+
+	        /*** **/
+
+	        $.ajax({
+		        type: 'GET',
+		        contentType: 'application/json',
+		        dataType: 'json',
+		        url: 'http://localhost:8081/maps/All',
+		        success: function(data) {
+		           console.log(JSON.stringify(data));
+		        }
+		    }); 
+	    });
+	});
+	</script>
+
+<button>Send an HTTP GET request to a page and get the result back</button>
+
+
+</body>
+</html>

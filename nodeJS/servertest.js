@@ -2,38 +2,57 @@ var express = require('express');
 var things = [];
 var app = express();
 var admin_app = express();
+var t_app = express();
 var port = 8081; 
 var admin_port = 8082;
+var t_port = 8083;
 
-app.get('/factory/', function(req, res) {
-  //Create a thing and add it to the thing array
+
+
+/** Fonction serveur 1 **/
+app.get('/', function(req, res) {
   console.log("ICI port 8081");
 });
 
-//Assume more functions to do to things here....
 
-admin_app.get('/factory/', function(req, res) {
+
+/** Fonction serveur 2 **/
+admin_app.get('/', function(req, res) {
   console.log("ICI port 8082");
 });
 
-admin_app.post('/listallthings/', function(req, res) {
-  // Return a list of all the things
+
+
+/** Fonction serveur 3 **/
+t_app.get('/', function(req, res) {
+  console.log("ICI port 8081");
 });
 
-admin_app.post('/killserver/', function(req,res){
-  //Kills the server after killing the things and doing clean up
-});
 
-//Assume https options properly setup.
 
+/** Server 1 **/
 var server = require('http').createServer(app);
 
 server.listen(port, function() {
     console.log('Listening on port ' + port);
 });
 
+
+
+
+/** Server 2 **/
 var admin_server = require('http').createServer(admin_app);
 
 admin_server.listen(admin_port, function() {
     console.log('Listening on admin port ' + admin_port);
+});
+
+
+
+
+/** Server 3 **/
+var t_server = require('http').createServer(t_app);
+
+t_server.listen(t_port, function() {
+    console.log('Listening on port ' + t_port);
 });
